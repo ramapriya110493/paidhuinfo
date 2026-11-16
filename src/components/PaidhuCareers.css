@@ -1,0 +1,613 @@
+/* ==========================================================================
+   PAIDHU CORPORATE CAREERS & EQUAL OPPORTUNITY PAGE
+   Scoped with .paidhu-cr-* for 100% style isolation
+   ========================================================================== */
+
+.paidhu-cr-page {
+  width: 100%;
+  background-color: #f7f7f9 !important;
+  color: #1a1a1a !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 1: HERO WITH WATERCOLOR ARTISTIC GRADIENT (Exact Reference)
+   -------------------------------------------------------------------------- */
+.paidhu-cr-hero {
+  position: relative;
+  width: 100%;
+  height: 86vh;
+  min-height: 540px;
+  max-height: 760px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #060709;
+}
+
+.paidhu-cr-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/careers_hero_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.paidhu-cr-hero-scrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgba(6, 7, 9, 0.96) 0%, 
+    rgba(6, 7, 9, 0.88) 45%, 
+    rgba(6, 7, 9, 0.55) 75%, 
+    rgba(6, 7, 9, 0.82) 100%
+  );
+  z-index: 2;
+}
+
+.paidhu-cr-hero-gold-glow {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, transparent 70%);
+  filter: blur(40px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.paidhu-cr-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.paidhu-cr-hero-textblock {
+  max-width: 740px;
+}
+
+.paidhu-cr-hero-kicker {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.25rem;
+  opacity: 0.95;
+}
+
+.paidhu-cr-hero-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.6rem 0;
+}
+
+@media (max-width: 768px) {
+  .paidhu-cr-hero-title {
+    font-size: 2.25rem;
+  }
+}
+
+.paidhu-cr-subtitle-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.paidhu-cr-gold-bar {
+  width: 3.5px;
+  height: 52px;
+  background-color: #d4af37;
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.paidhu-cr-hero-subtext {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.55;
+  max-width: 520px;
+  margin: 0;
+  opacity: 0.96;
+}
+
+/* Scroll Chevrons indicator */
+.paidhu-cr-scroll-chevrons {
+  position: absolute;
+  bottom: 2.2rem;
+  right: 3.5rem;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.paidhu-cr-scroll-chevrons:hover {
+  opacity: 1;
+  transform: translateY(3px);
+}
+
+.paidhu-cr-chevron {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  display: block;
+}
+
+.paidhu-cr-ch-2,
+.paidhu-cr-ch-3 {
+  margin-top: -13px;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: EQUAL OPPORTUNITY COMMITMENT & CORE PILLARS
+   -------------------------------------------------------------------------- */
+.paidhu-cr-statement-section {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 5rem 2rem 4rem;
+}
+
+.paidhu-cr-statement-header {
+  max-width: 820px;
+  margin-bottom: 3.5rem;
+}
+
+.paidhu-cr-tag-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #b8860b;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.paidhu-cr-statement-heading {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.22;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.paidhu-cr-statement-lead {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* 4 Pillars Grid */
+.paidhu-cr-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+@media (max-width: 1024px) {
+  .paidhu-cr-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .paidhu-cr-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.paidhu-cr-pillar-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.paidhu-cr-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #d4af37;
+}
+
+.paidhu-cr-pillar-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #fdf8eb;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #b8860b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.paidhu-cr-pillar-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.paidhu-cr-pillar-desc {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3: OPEN POSITIONS & RECRUITMENT FILTER
+   -------------------------------------------------------------------------- */
+.paidhu-cr-openings-section {
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #e8e8ec;
+  border-bottom: 1px solid #e8e8ec;
+  padding: 5rem 2rem 5.5rem;
+}
+
+.paidhu-cr-openings-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.paidhu-cr-openings-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.paidhu-cr-openings-heading {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.85rem 0;
+}
+
+.paidhu-cr-openings-subtext {
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 0 2rem 0;
+}
+
+/* Filter Pills */
+.paidhu-cr-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.paidhu-cr-filter-btn {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.paidhu-cr-filter-btn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+.paidhu-cr-filter-btn.active {
+  background: #111114;
+  border-color: #111114;
+  color: #f7e7b4;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Job Cards List */
+.paidhu-cr-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.paidhu-cr-job-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.8rem 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  transition: all 0.22s ease;
+}
+
+.paidhu-cr-job-card:hover {
+  border-color: #d4af37;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.12);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .paidhu-cr-job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+}
+
+.paidhu-cr-job-main {
+  flex: 1;
+}
+
+.paidhu-cr-job-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.paidhu-cr-badge-dept {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: #fdf8eb;
+  color: #b8860b;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.paidhu-cr-meta-item {
+  font-size: 0.8rem;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.paidhu-cr-job-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+}
+
+.paidhu-cr-job-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 780px;
+}
+
+.paidhu-cr-job-btn {
+  background: linear-gradient(135deg, #f7ba5a 0%, #d4af37 50%, #b8860b 100%);
+  color: #0a0a0a;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.6rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paidhu-cr-job-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4: LIFE AT PAIDHU & CULTURE BANNER
+   -------------------------------------------------------------------------- */
+.paidhu-cr-culture-section {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.paidhu-cr-culture-box {
+  background: linear-gradient(135deg, #111114 0%, #08080a 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 3.5rem 3rem;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .paidhu-cr-culture-box {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.8rem;
+  }
+}
+
+.paidhu-cr-culture-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.paidhu-cr-culture-text {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.paidhu-cr-culture-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.paidhu-cr-stat-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+}
+
+.paidhu-cr-stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #d4af37;
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.paidhu-cr-stat-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.35;
+}
+
+/* --------------------------------------------------------------------------
+   JOB APPLICATION MODAL
+   -------------------------------------------------------------------------- */
+.paidhu-cr-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.paidhu-cr-modal-window {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.paidhu-cr-modal-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paidhu-cr-modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.paidhu-cr-modal-body {
+  padding: 2rem;
+}
+
+.paidhu-cr-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.paidhu-cr-form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.4rem;
+}
+
+.paidhu-cr-form-input,
+.paidhu-cr-form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #1e293b;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.paidhu-cr-form-input:focus,
+.paidhu-cr-form-textarea:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.paidhu-cr-form-submit {
+  width: 100%;
+  background: linear-gradient(135deg, #f7ba5a 0%, #d4af37 50%, #b8860b 100%);
+  color: #0a0a0a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 0.85rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: filter 0.2s ease;
+}
+
+.paidhu-cr-form-submit:hover {
+  filter: brightness(1.08);
+}

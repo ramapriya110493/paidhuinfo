@@ -1,0 +1,268 @@
+/* ==========================================================================
+   TATA.COM COMPACT DROPDOWN (Matches exact height & style in screenshot)
+   ========================================================================== */
+.tata-business-dropdown {
+  position: absolute;
+  top: 76px;
+  left: 0;
+  width: 100%;
+  background: rgba(8, 8, 10, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
+  z-index: 1001;
+  animation: tataFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes tataFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tata-dropdown-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.4rem 2rem 1.6rem; /* Compact height matching Tata reference */
+}
+
+/* Overview Heading */
+.tata-compact-overview {
+  display: flex;
+  align-items: center;
+}
+
+.tata-compact-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.tata-compact-heading:hover {
+  color: #D4AF37;
+}
+
+.tata-heading-arrow {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.tata-compact-heading:hover .tata-heading-arrow {
+  transform: translateX(3px);
+  color: #D4AF37;
+}
+
+/* Thin Divider Line */
+.tata-compact-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 0.8rem 0 1rem;
+}
+
+/* Subheading */
+.tata-compact-subheading {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.85rem 0;
+}
+
+/* 3-Business Horizontal Row */
+.tata-compact-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 3rem;
+}
+
+/* 6-Brand 3-Column Grid */
+.tata-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem 3rem;
+}
+
+.tata-compact-link-item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.tata-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tata-item-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tata-item-name {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #E0E0E0;
+  transition: color 0.2s ease;
+}
+
+.tata-compact-link-item:hover .tata-item-name {
+  color: #D4AF37;
+}
+
+.compact-arrow {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.35);
+  transition: all 0.2s ease;
+}
+
+.tata-compact-link-item:hover .compact-arrow {
+  color: #D4AF37;
+  transform: translate(1.5px, -1.5px);
+}
+
+/* Category mention below the name */
+.tata-item-category {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: rgba(212, 175, 55, 0.75);
+  margin-top: 0.2rem;
+  transition: color 0.2s ease;
+}
+
+.tata-compact-link-item:hover .tata-item-category {
+  color: #F7E7B4;
+}
+
+/* ==========================================================================
+   ABOUT US MODE STYLING (Image 2 Tata.com Reference)
+   ========================================================================== */
+.tata-about-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.tata-about-main-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.tata-about-subheading {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.1rem 0;
+}
+
+.tata-about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem 4rem;
+}
+
+.tata-about-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.tata-about-link {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #D6D6D6;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
+  line-height: 1.4;
+}
+
+.tata-about-link:hover {
+  color: #D4AF37;
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   NEWSROOM MODE HIGHLIGHTS (The Indian Express Feature)
+   ========================================================================== */
+.tata-featured-media-link {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.2rem;
+  padding: 0.6rem 0.85rem;
+  margin-left: -0.85rem;
+  border-radius: 6px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  transition: all 0.2s ease;
+}
+
+.tata-featured-media-link:hover {
+  background: rgba(212, 175, 55, 0.16);
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateX(3px);
+}
+
+.tata-press-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #D4AF37;
+  text-transform: uppercase;
+}
+
+.tata-press-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.tata-press-sub {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-style: italic;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .tata-compact-links-grid,
+  .tata-brands-grid,
+  .tata-about-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .tata-business-dropdown {
+    display: none;
+  }
+}

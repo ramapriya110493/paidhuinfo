@@ -1,0 +1,504 @@
+/* ==========================================================================
+   PAIDHU HOME - "OUR BRANDS" SHOWCASE SECTION (Exact Tata.com Home Reference)
+   ========================================================================== */
+
+.paidhu-hb-section {
+  width: 100%;
+  position: relative;
+  background-color: #080a0f;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+/* Panoramic Visual Stage */
+.paidhu-hb-stage {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  height: 82vh;
+  max-height: 860px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .paidhu-hb-stage {
+    min-height: 580px;
+    height: auto;
+  }
+}
+
+/* Background Image Slides with Smooth Crossfade */
+.paidhu-hb-bg-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s ease-out;
+  z-index: 1;
+}
+
+.paidhu-hb-bg-layer.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Atmospheric Contrast Scrim on far-left only (Leaves 60%+ of the screen 100% Crystal Clear & Bright) */
+.paidhu-hb-left-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.52) 0%,
+    rgba(0, 0, 0, 0.2) 28%,
+    transparent 45%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   TOP SECTION PILL BADGE (Left Top & Right Rail)
+   ========================================================================== */
+.paidhu-hb-top-bar {
+  position: relative;
+  z-index: 5;
+  padding: 2.2rem 2.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paidhu-hb-floating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: rgba(14, 20, 32, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 0.65rem 1.6rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.paidhu-hb-floating-pill span {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* Vertical Tab on Right Edge (Tata.com Reference) */
+.paidhu-hb-right-rail-tab {
+  position: absolute;
+  right: 0;
+  top: 55%;
+  transform: translateY(-50%);
+  background-color: rgba(18, 24, 38, 0.85);
+  backdrop-filter: blur(10px);
+  border-left: 2px solid #d4af37;
+  padding: 1.2rem 0.55rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  z-index: 6;
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.35);
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .paidhu-hb-right-rail-tab {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   HERO CALLOUT / NARRATIVE CARD (Left Center Overlay)
+   ========================================================================== */
+.paidhu-hb-narrative-wrap {
+  position: relative;
+  z-index: 5;
+  padding: 0 2.5rem 2.5rem;
+  max-width: 580px;
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+  .paidhu-hb-narrative-wrap {
+    padding: 0 1.5rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.paidhu-hb-kicker-pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(18, 30, 49, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 0.4rem 0.95rem;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+.paidhu-hb-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  text-decoration: none !important;
+  color: #ffffff !important;
+}
+
+.paidhu-hb-brand-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .paidhu-hb-brand-title {
+    font-size: 2rem;
+  }
+}
+
+.paidhu-hb-link-icon {
+  color: #ffffff;
+  opacity: 0.85;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.paidhu-hb-title-row:hover .paidhu-hb-link-icon {
+  transform: translate(3px, -3px);
+  color: #d4af37;
+}
+
+.paidhu-hb-tagline {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+  margin-bottom: 1.6rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Tata Amber / Imperial Gold "View All →" Button */
+.paidhu-hb-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #d4af37;
+  color: #08080a;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.8rem;
+  border-radius: 3px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35);
+  transition: all 0.25s ease;
+}
+
+.paidhu-hb-action-btn:hover {
+  background-color: #f1c742;
+  transform: translateX(4px);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.5);
+  color: #000000;
+}
+
+/* ==========================================================================
+   BOTTOM FILMSTRIP CAROUSEL (Thumbnails Row with Navigation Arrows)
+   ========================================================================== */
+.paidhu-hb-filmstrip-bar {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  background: rgba(8, 10, 15, 0.88);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.1rem 1.5rem 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+@media (max-width: 640px) {
+  .paidhu-hb-filmstrip-bar {
+    padding: 0.85rem 0.85rem 1rem;
+    gap: 0.6rem;
+  }
+}
+
+/* Arrow Navigation Buttons (Amber Square Buttons matching Tata) */
+.paidhu-hb-nav-btn {
+  width: 44px;
+  height: 44px;
+  background-color: #d4af37;
+  color: #08080a;
+  border: none;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  transition: all 0.2s ease;
+}
+
+.paidhu-hb-nav-btn:hover {
+  background-color: #f1c742;
+  transform: scale(1.05);
+}
+
+.paidhu-hb-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Horizontal Scrolling Filmstrip Container */
+.paidhu-hb-thumbs-scroller {
+  flex: 1;
+  display: flex;
+  gap: 0.9rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.35rem 0.2rem;
+}
+
+.paidhu-hb-thumbs-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Thumbnail Card */
+.paidhu-hb-thumb-card {
+  position: relative;
+  flex: 0 0 170px;
+  height: 96px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #121722;
+  border: 2px solid transparent;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.8;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.paidhu-hb-thumb-card:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.paidhu-hb-thumb-card.active {
+  opacity: 1;
+  border-color: #d4af37;
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.5), 0 4px 14px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.paidhu-hb-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.35s ease;
+}
+
+.paidhu-hb-thumb-card:hover .paidhu-hb-thumb-img {
+  transform: scale(1.06);
+}
+
+/* Subtle, un-intrusive thumbnail hover caption (Exact Tata Style - Clean Photography) */
+.paidhu-hb-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 0.4rem 0.55rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.paidhu-hb-thumb-card:hover .paidhu-hb-thumb-overlay,
+.paidhu-hb-thumb-card.active .paidhu-hb-thumb-overlay {
+  opacity: 1;
+}
+
+.paidhu-hb-thumb-name {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.02em;
+}
+
+.paidhu-hb-thumb-card.active .paidhu-hb-thumb-name {
+  color: #d4af37;
+}
+
+/* Active Top Border Pip */
+.paidhu-hb-thumb-card.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #d4af37;
+  z-index: 3;
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE REFINEMENTS (Optimized for All Viewports)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .paidhu-hb-stage {
+    min-height: 520px;
+    height: 76vh;
+    max-height: 620px;
+  }
+  
+  /* Background positioning on mobile so product containers are centered */
+  .paidhu-hb-bg-layer {
+    background-position: 68% center !important;
+  }
+
+  /* Bottom-up scrim on mobile so text is legible while top stays 100% bright */
+  .paidhu-hb-left-scrim {
+    background: linear-gradient(
+      to top,
+      rgba(8, 10, 15, 0.82) 0%,
+      rgba(8, 10, 15, 0.45) 40%,
+      transparent 72%
+    );
+  }
+  
+  .paidhu-hb-top-bar {
+    padding: 1.25rem 1rem 0;
+  }
+  
+  .paidhu-hb-narrative-wrap {
+    padding: 0 1.25rem 1rem;
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+  }
+
+  .paidhu-hb-brand-title {
+    font-size: 1.85rem;
+  }
+
+  .paidhu-hb-filmstrip-bar {
+    padding: 0.75rem 0.65rem 0.9rem;
+    gap: 0.55rem;
+  }
+
+  .paidhu-hb-nav-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .paidhu-hb-thumb-card {
+    flex: 0 0 120px;
+    height: 72px;
+    scroll-snap-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .paidhu-hb-stage {
+    min-height: 480px;
+    height: 78vh;
+    max-height: 580px;
+  }
+
+  .paidhu-hb-top-bar {
+    padding: 1rem 0.85rem 0;
+  }
+
+  .paidhu-hb-floating-pill {
+    padding: 0.4rem 0.9rem;
+  }
+
+  .paidhu-hb-floating-pill span {
+    font-size: 0.72rem;
+  }
+
+  .paidhu-hb-narrative-wrap {
+    padding: 0 0.95rem 0.75rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .paidhu-hb-kicker-pill {
+    font-size: 0.62rem;
+    padding: 0.25rem 0.65rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .paidhu-hb-brand-title {
+    font-size: 1.6rem;
+  }
+
+  .paidhu-hb-action-btn {
+    padding: 0.58rem 1.25rem;
+    font-size: 0.8rem;
+  }
+
+  .paidhu-hb-filmstrip-bar {
+    padding: 0.6rem 0.45rem 0.75rem;
+    gap: 0.4rem;
+  }
+
+  .paidhu-hb-nav-btn {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+  .paidhu-hb-thumb-card {
+    flex: 0 0 105px;
+    height: 64px;
+    scroll-snap-align: center;
+  }
+
+  .paidhu-hb-thumb-name {
+    font-size: 0.64rem;
+  }
+}

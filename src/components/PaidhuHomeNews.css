@@ -1,0 +1,537 @@
+/* ==========================================================================
+   PAIDHU HOME - "IN THE NEWS" EDITORIAL SECTION (Exact Tata.com Home Reference)
+   ========================================================================== */
+
+.paidhu-hn-section {
+  width: 100%;
+  background-color: #f5f5f7 !important;
+  color: #1a1a1a !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  padding: 3.5rem 2rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.paidhu-hn-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Floating "In the News" Pill */
+.paidhu-hn-header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: #ffffff;
+  padding: 0.85rem 2.2rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  border-left: 3px solid #d4af37;
+}
+
+.paidhu-hn-header-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ==========================================
+   GRID LAYOUT: ROW 1 & ROW 2
+   ========================================== */
+.paidhu-hn-grid-row {
+  display: grid;
+  gap: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.paidhu-hn-row-top {
+  grid-template-columns: 1.65fr 1fr;
+}
+
+.paidhu-hn-row-bottom {
+  grid-template-columns: 1fr 1.65fr;
+}
+
+@media (max-width: 960px) {
+  .paidhu-hn-row-top,
+  .paidhu-hn-row-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   CARD 1: FEATURED PRESS RELEASE (TOP-LEFT)
+   ========================================== */
+.paidhu-hn-card-featured {
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  min-height: 380px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.paidhu-hn-card-featured:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 640px) {
+  .paidhu-hn-card-featured {
+    grid-template-columns: 1fr;
+  }
+}
+
+.paidhu-hn-featured-imgwrap {
+  position: relative;
+  overflow: hidden;
+  background-color: #111114;
+  min-height: 240px;
+}
+
+.paidhu-hn-featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.paidhu-hn-card-featured:hover .paidhu-hn-featured-img {
+  transform: scale(1.05);
+}
+
+/* Carousel Dots on Image */
+.paidhu-hn-dots-row {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 3;
+}
+
+.paidhu-hn-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.paidhu-hn-dot.active {
+  background: #ffffff;
+  width: 10px;
+  height: 10px;
+}
+
+/* Text Half of Featured Card */
+.paidhu-hn-featured-body {
+  padding: 2.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: #ffffff;
+}
+
+/* Tata Triangular Notch indicator */
+.paidhu-hn-notch {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 0;
+  height: 0;
+  border-top: 22px solid #ffffff;
+  border-right: 22px solid transparent;
+  z-index: 2;
+}
+
+.paidhu-hn-kicker-press {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #b8860b;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.paidhu-hn-featured-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin: 0 0 1.25rem 0;
+}
+
+.paidhu-hn-subrow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.paidhu-hn-goldline {
+  width: 3px;
+  height: 48px;
+  background-color: #d4af37;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border-radius: 1px;
+}
+
+.paidhu-hn-subtext {
+  font-size: 0.9rem;
+  color: #555555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================
+   CARD 2: COMPANY NEWS (TOP-RIGHT)
+   ========================================== */
+.paidhu-hn-card-company {
+  background: linear-gradient(135deg, #121216 0%, #08080a 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+  padding: 2.4rem 2rem 1.8rem;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.paidhu-hn-card-company:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.paidhu-hn-kicker-company {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #d4af37;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.paidhu-hn-company-name {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.25;
+}
+
+.paidhu-hn-story-link {
+  font-size: 1rem;
+  color: #f1f5f9;
+  line-height: 1.45;
+  margin: 0 0 0.85rem 0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.paidhu-hn-story-link:hover {
+  color: #d4af37;
+}
+
+.paidhu-hn-date {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-style: italic;
+  display: block;
+}
+
+.paidhu-hn-company-bottom {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.paidhu-hn-cycle-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.paidhu-hn-cycle-btn:hover {
+  color: #d4af37;
+  transform: scale(1.15);
+}
+
+.paidhu-hn-cycle-btn.rotating {
+  transform: rotate(180deg);
+}
+
+/* ==========================================
+   CARD 3: FACTS / DID YOU KNOW (BOTTOM-LEFT)
+   ========================================== */
+.paidhu-hn-card-facts {
+  background: #506886; /* Slate Blue-Gray with high contrast */
+  border-radius: 4px;
+  padding: 2.4rem 2rem 1.8rem;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  transition: transform 0.25s ease;
+}
+
+.paidhu-hn-card-facts:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+.paidhu-hn-kicker-facts {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.paidhu-hn-facts-heading {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+}
+
+.paidhu-hn-facts-quote {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: #f8fafc;
+  margin: 0 0 0.75rem 0;
+}
+
+.paidhu-hn-facts-source {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-style: italic;
+  display: block;
+}
+
+/* ==========================================
+   CARD 4: SHORTS / VIDEO FEATURE (BOTTOM-RIGHT)
+   ========================================== */
+.paidhu-hn-card-shorts {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 2.2rem 2rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #e66020 0%, #d83d6a 50%, #7c2250 100%);
+  color: #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.paidhu-hn-card-shorts:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.paidhu-hn-shorts-bg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+  mix-blend-mode: luminosity;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+.paidhu-hn-card-shorts:hover .paidhu-hn-shorts-bg-img {
+  opacity: 0.7;
+  transform: scale(1.04);
+}
+
+.paidhu-hn-shorts-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.paidhu-hn-kicker-shorts {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+}
+
+.paidhu-hn-play-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.paidhu-hn-card-shorts:hover .paidhu-hn-play-icon {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.paidhu-hn-shorts-content {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+}
+
+.paidhu-hn-shorts-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0 0 1.25rem 0;
+}
+
+.paidhu-hn-shorts-expand {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.paidhu-hn-card-shorts:hover .paidhu-hn-shorts-expand {
+  color: #ffffff;
+  transform: scale(1.15);
+}
+
+/* Floating Tata-style Social Media Pill on the right edge (Scoped to Section) */
+.paidhu-hn-social-float {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: #556c82;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.9rem 0.4rem;
+  writing-mode: vertical-rl;
+  border-radius: 4px 0 0 4px;
+  box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.paidhu-hn-social-float:hover {
+  background-color: #d4af37;
+  color: #0a0a0a;
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE REFINEMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  .paidhu-hn-social-float {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .paidhu-hn-section {
+    padding: 2.2rem 1.1rem 3.5rem;
+  }
+
+  .paidhu-hn-header-pill {
+    padding: 0.65rem 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .paidhu-hn-header-title {
+    font-size: 1.15rem;
+  }
+
+  .paidhu-hn-card-featured {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .paidhu-hn-featured-imgwrap {
+    min-height: 200px;
+    height: 200px;
+  }
+
+  .paidhu-hn-featured-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .paidhu-hn-title {
+    font-size: 1.25rem;
+  }
+
+  .paidhu-hn-card-company,
+  .paidhu-hn-card-facts,
+  .paidhu-hn-card-shorts {
+    min-height: auto;
+    padding: 1.6rem 1.25rem;
+  }
+
+  .paidhu-hn-company-name,
+  .paidhu-hn-facts-heading,
+  .paidhu-hn-shorts-title {
+    font-size: 1.35rem;
+  }
+
+  .paidhu-hn-modal-content {
+    padding: 1.5rem 1rem;
+    max-height: 92vh;
+  }
+}

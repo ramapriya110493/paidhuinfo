@@ -1,0 +1,765 @@
+/* ==========================================================================
+   PAIDHU HOME - CAREERS SHOWCASE SECTION (Exact Tata.com Home Reference)
+   ========================================================================== */
+
+.paidhu-hc-section {
+  width: 100%;
+  background-color: #f5f5f7 !important;
+  color: #1a1a1a !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  padding: 3.5rem 2rem 5.5rem;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.paidhu-hc-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Floating "Careers" Pill (Matches "In the News" Pill) */
+.paidhu-hc-header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: #ffffff;
+  padding: 0.85rem 2.2rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  border-left: 3px solid #d4af37;
+}
+
+.paidhu-hc-header-title {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* ==========================================================================
+   3-COLUMN ASYMMETRIC GRID (Exact Tata.com Layout)
+   Col 1: Tall Card 1 (spans row 1 & row 2)
+   Col 2-3 Row 1: Wide Card 2 (Students & Researchers)
+   Col 2 Row 2: In Numbers Card 3
+   Col 3 Row 2: Featured Jobs Card 4
+   ========================================================================== */
+.paidhu-hc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1.8rem;
+}
+
+@media (max-width: 1024px) {
+  .paidhu-hc-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .paidhu-hc-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+}
+
+/* ==========================================================================
+   CARD 1: LEFT TALL CARD (Beware of Job Scams - Spans Rows 1 & 2)
+   ========================================================================== */
+.paidhu-hc-card-tall {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (max-width: 1024px) {
+  .paidhu-hc-card-tall {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}
+
+.paidhu-hc-card-tall:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.paidhu-hc-scam-imgwrap {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-color: #e5ded6;
+  overflow: hidden;
+}
+
+.paidhu-hc-scam-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.paidhu-hc-card-tall:hover .paidhu-hc-scam-img {
+  transform: scale(1.03);
+}
+
+/* Iconic Downward Triangle Notch into White Card */
+.paidhu-hc-scam-notch {
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid #ffffff;
+  z-index: 2;
+}
+
+.paidhu-hc-scam-body {
+  padding: 2.2rem 2rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.paidhu-hc-scam-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #b8860b;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.paidhu-hc-scam-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.25;
+  margin: 0 0 1.5rem 0;
+}
+
+.paidhu-hc-scam-quote {
+  border-left: 2.5px solid #d4af37;
+  padding-left: 1.1rem;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 2rem 0;
+}
+
+.paidhu-hc-disclaimer-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #b8860b;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.paidhu-hc-disclaimer-btn:hover {
+  color: #8b6508;
+}
+
+.paidhu-hc-scam-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.paidhu-hc-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fbf9f5;
+  border: 1px solid #e8e2d5;
+  color: #b8860b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.paidhu-hc-arrow-btn:hover {
+  background: #d4af37;
+  color: #08080a;
+  border-color: #d4af37;
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   CARD 2: TOP-RIGHT WIDE CARD (For Students & Researchers)
+   ========================================================================== */
+.paidhu-hc-card-student {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  background: linear-gradient(135deg, #090e17 0%, #121c2c 60%, #1a283e 100%);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  position: relative;
+  min-height: 290px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (max-width: 1024px) {
+  .paidhu-hc-card-student {
+    grid-column: 1 / -1;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .paidhu-hc-card-student {
+    flex-direction: column;
+  }
+}
+
+.paidhu-hc-card-student:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.paidhu-hc-student-content {
+  flex: 1.25;
+  padding: 2.2rem 2rem 2rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.paidhu-hc-student-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #d4af37;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.paidhu-hc-student-badge-title {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 4px;
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.paidhu-hc-student-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.paidhu-hc-student-desc {
+  border-left: 2px solid #d4af37;
+  padding-left: 1rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #cfd9e8;
+  margin: 0;
+}
+
+.paidhu-hc-student-desc strong {
+  color: #d4af37;
+  font-weight: 600;
+}
+
+.paidhu-hc-student-media {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 60% 50%, rgba(212, 175, 55, 0.15), transparent 70%);
+}
+
+@media (max-width: 640px) {
+  .paidhu-hc-student-media {
+    height: 220px;
+  }
+}
+
+.paidhu-hc-student-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  mix-blend-mode: normal;
+  transition: transform 0.4s ease;
+}
+
+.paidhu-hc-card-student:hover .paidhu-hc-student-img {
+  transform: scale(1.04);
+}
+
+/* Creative Doodles & Badges Overlay */
+.paidhu-hc-doodle-tag {
+  position: absolute;
+  padding: 0.35rem 0.8rem;
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  z-index: 3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.paidhu-hc-doodle-create {
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #d4af37;
+  color: #08080a;
+  transform: rotate(6deg);
+}
+
+.paidhu-hc-doodle-step {
+  bottom: 2.2rem;
+  right: 1.8rem;
+  background: #ffffff;
+  color: #0a0b0e;
+  transform: rotate(-4deg);
+}
+
+.paidhu-hc-student-arrow {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  transition: all 0.25s ease;
+}
+
+.paidhu-hc-card-student:hover .paidhu-hc-student-arrow {
+  background: #d4af37;
+  color: #08080a;
+  border-color: #d4af37;
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   CARD 3: BOTTOM-LEFT CARD (In Numbers)
+   ========================================================================== */
+.paidhu-hc-card-numbers {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 2.2rem 2rem 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (max-width: 1024px) {
+  .paidhu-hc-card-numbers {
+    grid-column: 1 / 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .paidhu-hc-card-numbers {
+    grid-column: 1 / -1;
+  }
+}
+
+.paidhu-hc-card-numbers:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.paidhu-hc-numbers-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #b8860b;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.paidhu-hc-numbers-body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.paidhu-hc-numbers-icon {
+  width: 48px;
+  height: 48px;
+  color: #8c734b;
+  margin-bottom: 0.75rem;
+}
+
+.paidhu-hc-numbers-stat {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #0b1118;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.paidhu-hc-numbers-label {
+  font-size: 0.92rem;
+  color: #4a5568;
+  line-height: 1.45;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.paidhu-hc-numbers-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ==========================================================================
+   CARD 4: BOTTOM-RIGHT CARD (Featured Jobs - Paidhu Brand Styling)
+   ========================================================================== */
+.paidhu-hc-card-jobs {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  background: linear-gradient(145deg, #0f1724 0%, #19273c 100%);
+  border-radius: 4px;
+  padding: 2.2rem 2rem 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .paidhu-hc-card-jobs {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .paidhu-hc-card-jobs {
+    grid-column: 1 / -1;
+  }
+}
+
+.paidhu-hc-card-jobs:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+.paidhu-hc-jobs-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #d4af37;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.paidhu-hc-jobs-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1.4rem 0;
+}
+
+.paidhu-hc-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 1.6rem;
+}
+
+.paidhu-hc-job-item {
+  border-left: 2px solid #d4af37;
+  padding-left: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.paidhu-hc-job-item:hover {
+  transform: translateX(3px);
+}
+
+.paidhu-hc-job-name {
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-bottom: 0.25rem;
+}
+
+.paidhu-hc-job-loc {
+  font-size: 0.82rem;
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.paidhu-hc-jobs-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Interactive Slide Dots */
+.paidhu-hc-jobs-dots {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.paidhu-hc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.paidhu-hc-dot.active {
+  background: #d4af37;
+  width: 18px;
+}
+
+.paidhu-hc-jobs-arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.paidhu-hc-card-jobs:hover .paidhu-hc-jobs-arrow {
+  background: #d4af37;
+  color: #08080a;
+  border-color: #d4af37;
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   JOB SCAM DISCLAIMER MODAL
+   ========================================================================== */
+.paidhu-hc-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 8, 10, 0.82);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.paidhu-hc-modal-card {
+  background: #ffffff;
+  border-radius: 6px;
+  max-width: 620px;
+  width: 100%;
+  padding: 2.5rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  border-top: 4px solid #d4af37;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.paidhu-hc-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: #f5f5f7;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.paidhu-hc-modal-close:hover {
+  background: #08080a;
+  color: #ffffff;
+}
+
+.paidhu-hc-modal-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #b8860b;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.paidhu-hc-modal-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0b1118;
+  margin: 0 0 1.2rem 0;
+}
+
+.paidhu-hc-modal-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.paidhu-hc-modal-body p {
+  margin-bottom: 1rem;
+}
+
+.paidhu-hc-modal-alert {
+  background: #fff9e6;
+  border-left: 4px solid #d4af37;
+  padding: 1rem 1.2rem;
+  border-radius: 3px;
+  margin: 1.4rem 0;
+  font-weight: 600;
+  color: #5c450c;
+  font-size: 0.92rem;
+}
+
+.paidhu-hc-modal-btn {
+  display: inline-block;
+  background: #0b1118;
+  color: #ffffff;
+  padding: 0.85rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.paidhu-hc-modal-btn:hover {
+  background: #d4af37;
+  color: #08080a;
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE REFINEMENTS
+   ========================================================================== */
+@media (max-width: 640px) {
+  .paidhu-hc-section {
+    padding: 2.2rem 1.1rem 3.5rem;
+  }
+
+  .paidhu-hc-header-pill {
+    padding: 0.65rem 1.4rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .paidhu-hc-header-title {
+    font-size: 1.15rem;
+  }
+
+  .paidhu-hc-scam-imgwrap {
+    height: 200px;
+  }
+
+  .paidhu-hc-scam-body {
+    padding: 1.6rem 1.25rem 1.25rem;
+  }
+
+  .paidhu-hc-scam-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .paidhu-hc-scam-quote {
+    font-size: 0.88rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .paidhu-hc-student-content {
+    padding: 1.6rem 1.25rem 1.25rem;
+  }
+
+  .paidhu-hc-student-title {
+    font-size: 1.25rem;
+  }
+
+  .paidhu-hc-student-media {
+    height: 190px;
+  }
+
+  .paidhu-hc-card-numbers {
+    padding: 1.6rem 1.25rem 1.25rem;
+  }
+
+  .paidhu-hc-numbers-stat {
+    font-size: 2.2rem;
+  }
+
+  .paidhu-hc-card-jobs {
+    padding: 1.6rem 1.25rem 1.25rem;
+  }
+
+  .paidhu-hc-jobs-title {
+    font-size: 1.25rem;
+  }
+
+  .paidhu-hc-modal-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .paidhu-hc-modal-title {
+    font-size: 1.3rem;
+  }
+}
