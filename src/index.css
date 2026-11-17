@@ -3121,7 +3121,7 @@ html, body {
   .paidhu-hero-stage {
     height: 100vh;
     height: 100dvh;
-    min-height: 560px;
+    min-height: 100%;
   }
   .hero-slide-layer {
     background-image: var(--mobile-bg) !important;
@@ -3210,6 +3210,22 @@ html, body {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
+  }
+}
+
+@media (max-height: 520px) {
+  .paidhu-navbar {
+    height: 52px !important;
+  }
+  .paidhu-brand-logo {
+    height: 30px !important;
+  }
+  .hero-pagination-dock {
+    bottom: 0.75rem !important;
+    gap: 6px !important;
+  }
+  .progress-bar-slot {
+    height: 2px !important;
   }
 }
 
