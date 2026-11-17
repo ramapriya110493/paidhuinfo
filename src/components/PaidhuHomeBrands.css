@@ -35,6 +35,7 @@
 .paidhu-hb-bg-layer {
   position: absolute;
   inset: 0;
+  background-image: var(--desktop-bg);
   background-size: cover;
   background-position: center center;
   opacity: 0;
@@ -395,9 +396,11 @@
     max-height: 620px;
   }
   
-  /* Background positioning on mobile so product containers are centered */
+  /* Background positioning & responsive asset swap on mobile */
   .paidhu-hb-bg-layer {
-    background-position: 68% center !important;
+    background-image: var(--mobile-bg) !important;
+    background-position: center top !important;
+    background-size: cover !important;
   }
 
   /* Bottom-up scrim on mobile so text is legible while top stays 100% bright */

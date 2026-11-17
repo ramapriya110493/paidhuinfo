@@ -15,6 +15,7 @@ export const PaidhuHomeBrands = ({ onOpenBrandModal }) => {
       tagline: 'Tradition in Every Spoon. Taste in Every Bite – Syrups, Spreads & Chutneys',
       description: 'Micro-infused flower spreads, handcrafted syrups, and traditional floral chutneys delivering delightful taste and freshness in every bite.',
       image: '/assets/paidhu_floffi_clean.jpg',
+      mobileImage: '/assets/paidhu_floffi_mobile.jpg',
       thumb: '/assets/paidhu_floffi_clean.jpg',
       bgPosition: 'center center',
       url: 'https://floffi.in'
@@ -26,6 +27,7 @@ export const PaidhuHomeBrands = ({ onOpenBrandModal }) => {
       tagline: 'Pure Grade-A Mongra Kashmiri Saffron from the Terraces of Pampore',
       description: 'Laboratory-certified 285+ crocin active botanical density. 100% natural, ethically harvested, with complete single-origin valley traceability.',
       image: '/assets/hero_saffron.jpg',
+      mobileImage: '/assets/hero_saffron_mobile.jpg',
       thumb: '/assets/hero_saffron.jpg',
       url: 'https://paidhusaffron.com'
     },
@@ -36,6 +38,7 @@ export const PaidhuHomeBrands = ({ onOpenBrandModal }) => {
       tagline: 'Made with Real Flowers. Baked with Love – 100% Natural',
       description: 'Baked with pure A2 clarified butter and real organic edible flower petals, delivering pure crisp indulgence with zero hydrogenated fats.',
       image: '/assets/paidhu_bloom_cookies_clean.jpg',
+      mobileImage: '/assets/paidhu_bloom_cookies_mobile.jpg',
       thumb: '/assets/paidhu_bloom_cookies_clean.jpg',
       bgPosition: 'center center',
       url: 'https://paidhuethicalfoods.com'
@@ -47,6 +50,7 @@ export const PaidhuHomeBrands = ({ onOpenBrandModal }) => {
       tagline: 'Nature’s Goodness in Every Sip – Whole-Flower Herbal Teas',
       description: 'A perfect blend of purity, taste, and tradition crafted with Saffron, Lavender, Blue Pea, and Hibiscus blossoms to nourish body and soul.',
       image: '/assets/paidhu_medley_teas_clean.jpg',
+      mobileImage: '/assets/paidhu_medley_teas_mobile.jpg',
       thumb: '/assets/paidhu_medley_teas_clean.jpg',
       bgPosition: 'center center',
       url: 'https://paidhuethicalfoods.com'
@@ -58,6 +62,7 @@ export const PaidhuHomeBrands = ({ onOpenBrandModal }) => {
       tagline: 'Enterprise Software, Edge Architecture & Growth Engines',
       description: 'Powering ethical businesses with next-generation digital platforms, predictive analytics, and decentralized supply-chain farm ledgers.',
       image: '/assets/hero_tech.jpg',
+      mobileImage: '/assets/hero_tech.jpg',
       thumb: '/assets/hero_viyara_team.jpg',
       url: 'https://viyara.co.in'
     },
@@ -68,6 +73,7 @@ export const PaidhuHomeBrands = ({ onOpenBrandModal }) => {
       tagline: 'Nature’s Floral Goodness in Every Jar – Handcrafted with Real Flowers',
       description: 'Delicious petal jams crafted with fresh edible flowers (Hibiscus, Tanner’s, Neem Flower, and Damask Rose), pure ingredients, and the goodness of nature.',
       image: '/assets/paidhu_petal_jam_clean.jpg',
+      mobileImage: '/assets/paidhu_petal_jam_mobile.jpg',
       thumb: '/assets/paidhu_petal_jam_clean.jpg',
       bgPosition: 'center center',
       url: 'https://paidhuethicalfoods.com'
@@ -79,6 +85,7 @@ export const PaidhuHomeBrands = ({ onOpenBrandModal }) => {
       tagline: 'Creative Innovation Academy & Food Bio-Science Workshops',
       description: 'Bridging design thinking, food innovation, and practical youth mentorship to nurture visionary entrepreneurs in sustainable wellness.',
       image: '/assets/kalikasphere_luxury_academy.jpg',
+      mobileImage: '/assets/kalikasphere_luxury_academy.jpg',
       thumb: '/assets/hero_education.jpg',
       url: 'https://kalikasphere.com'
     }
@@ -133,7 +140,8 @@ export const PaidhuHomeBrands = ({ onOpenBrandModal }) => {
             key={brand.id}
             className={`paidhu-hb-bg-layer ${idx === activeIndex ? 'active' : ''}`}
             style={{ 
-              backgroundImage: `url(${brand.image})`,
+              '--desktop-bg': `url(${brand.image})`,
+              '--mobile-bg': `url(${brand.mobileImage || brand.image})`,
               backgroundPosition: brand.bgPosition || 'center center'
             }}
             role="img"
