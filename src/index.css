@@ -3131,13 +3131,54 @@ html, body {
   .hero-vertical-navigation {
     display: none;
   }
-  .hero-luxury-title {
-    font-size: 2.4rem;
-  }
   .hero-narrative-container {
+    position: absolute;
+    bottom: 5.8rem;
+    left: 1.25rem;
+    right: 1.25rem;
     margin-left: 0;
-    padding: 0 1.5rem;
-    max-width: 100%;
+    padding: 0;
+    max-width: calc(100% - 2.5rem);
+    z-index: 15;
+    pointer-events: auto;
+  }
+  .hero-badge-pill {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.68rem;
+    margin-bottom: 0.45rem;
+  }
+  .hero-luxury-title {
+    font-size: 1.7rem;
+    line-height: 1.15;
+    margin-bottom: 0.35rem;
+  }
+  .hero-editorial-quote {
+    margin-bottom: 0.65rem;
+  }
+  .hero-editorial-text {
+    font-size: 0.85rem;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .hero-action-cluster {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+    width: auto;
+  }
+  .hero-primary-btn {
+    padding: 0.5rem 1.15rem;
+    font-size: 0.78rem;
+    width: auto;
+  }
+  .hero-secondary-btn {
+    display: none;
+  }
+  .hero-metrics-strip {
+    display: none;
   }
 
   /* Tata-Style Clean Hero Dock for Mobile */
@@ -3220,8 +3261,17 @@ html, body {
   .paidhu-brand-logo {
     height: 30px !important;
   }
+  .hero-narrative-container {
+    bottom: 3.2rem !important;
+  }
+  .hero-luxury-title {
+    font-size: 1.25rem !important;
+  }
+  .hero-editorial-quote {
+    display: none !important;
+  }
   .hero-pagination-dock {
-    bottom: 0.75rem !important;
+    bottom: 0.65rem !important;
     gap: 6px !important;
   }
   .progress-bar-slot {
@@ -3238,21 +3288,14 @@ html, body {
     width: 34px;
     height: 34px;
   }
+  .hero-narrative-container {
+    bottom: 5.2rem;
+  }
   .hero-luxury-title {
-    font-size: 2rem;
+    font-size: 1.45rem;
   }
   .hero-editorial-text {
-    font-size: 0.95rem;
-  }
-  .hero-action-cluster {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-  .hero-primary-btn,
-  .hero-secondary-btn {
-    justify-content: center;
-    width: 100%;
+    font-size: 0.8rem;
   }
   .dock-slide-counter {
     font-size: 0.88rem;
