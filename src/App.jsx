@@ -214,7 +214,7 @@ function App() {
       buttonText: '',
       secondaryText: '',
       bgImage: '/assets/hero_marigold_harvest.jpg',
-      mobilePosition: '72% center',
+      mobileBgImage: '/assets/hero_marigold_harvest_mobile.jpg',
       sectionId: 'brands',
       secondarySectionId: 'philosophy',
       metrics: []
@@ -227,7 +227,7 @@ function App() {
       buttonText: '',
       secondaryText: '',
       bgImage: '/assets/hero_saffron.jpg',
-      mobilePosition: 'center center',
+      mobileBgImage: '/assets/hero_saffron_mobile.jpg',
       sectionId: 'brands',
       secondarySectionId: 'brands',
       metrics: []
@@ -240,7 +240,7 @@ function App() {
       buttonText: '',
       secondaryText: '',
       bgImage: '/assets/hero_viyara_team.jpg',
-      mobilePosition: 'center center',
+      mobileBgImage: '/assets/hero_viyara_team_mobile.jpg',
       sectionId: 'brands',
       secondarySectionId: 'brands',
       metrics: []
@@ -867,8 +867,8 @@ function App() {
             key={slide.id}
             className={`hero-slide-layer ${index === currentSlide ? 'active' : ''}`}
             style={{ 
-              backgroundImage: `url(${slide.bgImage})`,
-              '--mobile-pos': slide.mobilePosition || 'center center'
+              '--desktop-bg': `url(${slide.bgImage})`,
+              '--mobile-bg': `url(${slide.mobileBgImage || slide.bgImage})`
             }}
           />
         ))}
