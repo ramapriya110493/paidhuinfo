@@ -78,8 +78,8 @@ export const PaidhuHomeCareers = ({ onNavigateCareers }) => {
           >
             <div className="paidhu-hc-scam-imgwrap">
               <img 
-                src="/assets/careers_scam_cookie.jpg" 
-                alt="Paidhu Artisanal Floral Cookies and Confections" 
+                src="/assets/careers_scam_advisory.jpg" 
+                alt="Paidhu Careers Official Recruitment Authentication & Security Advisory" 
                 className="paidhu-hc-scam-img"
               />
               <div className="paidhu-hc-scam-notch" />
