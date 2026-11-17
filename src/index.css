@@ -935,7 +935,12 @@ html, body {
   justify-content: space-between;
 }
 
+.dock-action-row {
+  display: contents;
+}
+
 .dock-left-controls {
+  order: 1;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -985,9 +990,12 @@ html, body {
 }
 
 .dock-progress-tracks {
+  order: 2;
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-right: auto;
+  margin-left: 20px;
 }
 
 .progress-bar-slot {
@@ -1030,6 +1038,7 @@ html, body {
 }
 
 .dock-right-arrows {
+  order: 3;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1077,7 +1086,25 @@ html, body {
 }
 
 .scroll-chevrons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   animation: bounceDownChevron 2s infinite ease-in-out;
+}
+
+.scroll-chevrons svg {
+  display: block;
+}
+
+.scroll-chevrons svg.chev-sub {
+  margin-top: -8px;
+  opacity: 0.65;
+}
+
+.scroll-chevrons svg.chev-sub2 {
+  margin-top: -8px;
+  opacity: 0.35;
 }
 
 @keyframes bounceDownChevron {
@@ -3069,10 +3096,34 @@ html, body {
     display: none;
   }
   .mobile-hamburger {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .navbar-connect-btn {
     display: none;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .navbar-actions {
+    gap: 8px;
+  }
+  .paidhu-navbar {
+    padding: 0 1rem;
+    height: 64px;
+  }
+  .paidhu-brand-logo {
+    height: 38px;
+    max-width: 140px;
+  }
+  .paidhu-hero-stage {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 560px;
+  }
+  .hero-slide-layer {
+    background-position: var(--mobile-pos, 72% center) !important;
   }
   .hero-vertical-navigation {
     display: none;
@@ -3085,14 +3136,62 @@ html, body {
     padding: 0 1.5rem;
     max-width: 100%;
   }
+
+  /* Tata-Style Clean Hero Dock for Mobile */
   .hero-pagination-dock {
-    left: 1.5rem;
-    right: 1.5rem;
-    bottom: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 2rem;
+  }
+  .dock-progress-tracks {
+    order: 1;
+    display: flex !important;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+    margin: 0;
   }
   .progress-bar-slot {
-    width: 50px;
+    flex: 0 1 70px;
+    width: auto;
+    max-width: 80px;
+    height: 3px;
   }
+  .dock-action-row {
+    order: 2;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dock-left-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    order: 1;
+    margin: 0;
+  }
+  .dock-right-arrows {
+    display: flex;
+    align-items: center;
+    order: 2;
+    gap: 0;
+    margin: 0;
+  }
+  .dock-arrow-btn {
+    display: none !important;
+  }
+  .scroll-caption {
+    display: none !important;
+  }
+  .scroll-down-invitation {
+    margin-left: 0;
+    padding: 4px;
+  }
+
   .metrics-container {
     flex-direction: column;
     gap: 2rem;
@@ -3112,6 +3211,14 @@ html, body {
 }
 
 @media (max-width: 480px) {
+  .paidhu-brand-logo {
+    height: 34px;
+    max-width: 125px;
+  }
+  .action-icon-btn {
+    width: 34px;
+    height: 34px;
+  }
   .hero-luxury-title {
     font-size: 2rem;
   }
@@ -3128,7 +3235,11 @@ html, body {
     justify-content: center;
     width: 100%;
   }
-  .dock-progress-tracks {
-    display: none;
+  .dock-slide-counter {
+    font-size: 0.88rem;
+  }
+  .progress-bar-slot {
+    flex: 0 1 55px;
+    max-width: 65px;
   }
 }

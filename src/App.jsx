@@ -214,6 +214,7 @@ function App() {
       buttonText: '',
       secondaryText: '',
       bgImage: '/assets/hero_marigold_harvest.jpg',
+      mobilePosition: '72% center',
       sectionId: 'brands',
       secondarySectionId: 'philosophy',
       metrics: []
@@ -226,6 +227,7 @@ function App() {
       buttonText: '',
       secondaryText: '',
       bgImage: '/assets/hero_saffron.jpg',
+      mobilePosition: 'center center',
       sectionId: 'brands',
       secondarySectionId: 'brands',
       metrics: []
@@ -238,6 +240,7 @@ function App() {
       buttonText: '',
       secondaryText: '',
       bgImage: '/assets/hero_viyara_team.jpg',
+      mobilePosition: 'center center',
       sectionId: 'brands',
       secondarySectionId: 'brands',
       metrics: []
@@ -264,10 +267,12 @@ function App() {
       ? 'http://localhost:5001/api/brands'
       : '/api/brands';
     fetch(apiUrl)
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) throw new Error('API offline');
+        return res.json();
+      })
       .then(data => setBrands(data))
-      .catch(err => {
-        console.error("Error fetching brands: ", err);
+      .catch(() => {
         setBrands([
           {
             id: 'paidhuethicalfoods',
@@ -522,7 +527,7 @@ function App() {
           <div className="navbar-actions">
             {/* Global Language Selector (Tata.com Style) */}
             <button 
-              className="action-icon-btn" 
+              className="action-icon-btn hide-on-mobile" 
               title="Global / Region" 
               aria-label="Language selector"
               onClick={() => setShowContactModal(true)}
@@ -535,7 +540,7 @@ function App() {
             </button>
 
             <button 
-              className="action-icon-btn" 
+              className="action-icon-btn hide-on-mobile" 
               title="Contact Paidhu" 
               aria-label="Contact"
               onClick={() => setShowContactModal(true)}
@@ -861,7 +866,10 @@ function App() {
           <div 
             key={slide.id}
             className={`hero-slide-layer ${index === currentSlide ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${slide.bgImage})` }}
+            style={{ 
+              backgroundImage: `url(${slide.bgImage})`,
+              '--mobile-pos': slide.mobilePosition || 'center center'
+            }}
           />
         ))}
 
@@ -959,72 +967,82 @@ function App() {
           </div>
         </div>
 
-        {/* Bottom Pagination & Progress Dock */}
+        {/* Bottom Pagination & Progress Dock (Tata-grade Responsive Architecture) */}
         <div className="hero-pagination-dock">
-          <div className="dock-left-controls">
-            <button 
-              className="dock-icon-btn" 
-              onClick={() => setIsPlaying(!isPlaying)}
-              title={isPlaying ? "Pause auto-slider" : "Play auto-slider"}
-            >
-              {isPlaying ? (
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                  <rect x="6" y="4" width="4" height="16"/>
-                  <rect x="14" y="4" width="4" height="16"/>
-                </svg>
-              ) : (
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                  <polygon points="5 3 19 12 5 21 5 3"/>
-                </svg>
-              )}
-            </button>
-
-            <div className="dock-slide-counter">
-              <span className="current-num">0{currentSlide + 1}</span>
-              <span className="divider">/</span>
-              <span className="total-num">0{heroSlides.length}</span>
-            </div>
-
-            <div className="dock-progress-tracks">
-              {heroSlides.map((slide, idx) => (
-                <button 
-                  key={slide.id} 
-                  className={`progress-bar-slot ${idx === currentSlide ? 'active' : idx < currentSlide ? 'done' : ''}`}
-                  onClick={() => handleSlideChange(idx)}
-                  title={slide.title}
-                  aria-label={`Go to slide ${idx + 1}`}
-                >
-                  <span className="progress-fill" />
-                </button>
-              ))}
-            </div>
+          {/* Centered Progress Tracks (Prominent centered row on mobile; inline on desktop) */}
+          <div className="dock-progress-tracks">
+            {heroSlides.map((slide, idx) => (
+              <button 
+                key={slide.id} 
+                className={`progress-bar-slot ${idx === currentSlide ? 'active' : idx < currentSlide ? 'done' : ''}`}
+                onClick={() => handleSlideChange(idx)}
+                title={slide.title || `Slide ${idx + 1}`}
+                aria-label={`Go to slide ${idx + 1}`}
+              >
+                <span className="progress-fill" />
+              </button>
+            ))}
           </div>
 
-          <div className="dock-right-arrows">
-            <button className="dock-arrow-btn" onClick={prevSlide} title="Previous Slide" aria-label="Previous Slide">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="15 18 9 12 15 6"/>
-              </svg>
-            </button>
-            <button className="dock-arrow-btn" onClick={nextSlide} title="Next Slide" aria-label="Next Slide">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="9 18 15 12 9 6"/>
-              </svg>
-            </button>
+          <div className="dock-action-row">
+            <div className="dock-left-controls">
+              <button 
+                className="dock-icon-btn" 
+                onClick={() => setIsPlaying(!isPlaying)}
+                title={isPlaying ? "Pause auto-slider" : "Play auto-slider"}
+                aria-label={isPlaying ? "Pause auto-slider" : "Play auto-slider"}
+              >
+                {isPlaying ? (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="6" y="4" width="4" height="16"/>
+                    <rect x="14" y="4" width="4" height="16"/>
+                  </svg>
+                ) : (
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                )}
+              </button>
 
-            <div 
-              className="scroll-down-invitation"
-              onClick={() => {
-                const el = document.getElementById('in-the-news-home');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-              }}
-              title="Explore In the News"
-            >
-              <span className="scroll-caption">EXPLORE</span>
-              <div className="scroll-chevrons">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="6 9 12 15 18 9"/>
+              <div className="dock-slide-counter">
+                <span className="current-num">0{currentSlide + 1}</span>
+                <span className="divider">/</span>
+                <span className="total-num">0{heroSlides.length}</span>
+              </div>
+            </div>
+
+            <div className="dock-right-arrows">
+              <button className="dock-arrow-btn" onClick={prevSlide} title="Previous Slide" aria-label="Previous Slide">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="15 18 9 12 15 6"/>
                 </svg>
+              </button>
+              <button className="dock-arrow-btn" onClick={nextSlide} title="Next Slide" aria-label="Next Slide">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </button>
+
+              <div 
+                className="scroll-down-invitation"
+                onClick={() => {
+                  const el = document.getElementById('in-the-news-home');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+                title="Scroll to explore"
+              >
+                <span className="scroll-caption">EXPLORE</span>
+                <div className="scroll-chevrons">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="chev-sub">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="chev-sub2">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
