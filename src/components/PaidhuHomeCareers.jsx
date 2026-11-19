@@ -10,37 +10,25 @@ export const PaidhuHomeCareers = ({ onNavigateCareers }) => {
     [
       {
         id: 1,
-        title: 'Head of Botanical Quality & Food Science',
-        location: 'Paidhu Ethical Foods, Bengaluru'
+        title: 'E-Commerce Executive (Min 2 Yrs Exp)',
+        location: 'Paidhu Group & Floffi D2C, Coimbatore / Hybrid'
       },
       {
         id: 2,
-        title: 'Lead Enterprise Architect & Fullstack',
-        location: 'VIYARA Tech, Remote / Chennai'
+        title: 'Social Media Executive (Min 2 Yrs Exp)',
+        location: 'Paidhu Creative Studio, Chennai / Hybrid'
       }
     ],
     [
       {
         id: 3,
-        title: 'Executive Master Confectioner',
-        location: 'Floffi Culinary Labs, Coimbatore'
+        title: 'Business Development Officer (Min 2 Yrs Exp)',
+        location: 'Paidhu Group Corporate, Bengaluru / Coimbatore'
       },
       {
         id: 4,
-        title: 'Agronomy Research Fellow (Project Malar)',
-        location: 'Just B Happy Network, Kashmir / Pollachi'
-      }
-    ],
-    [
-      {
-        id: 5,
-        title: 'Global Export Operations Specialist',
-        location: 'Paidhu Saffron, Srinagar / Dubai'
-      },
-      {
-        id: 6,
-        title: 'Senior Biochemical Crocin Analyst',
-        location: 'KalikaSphere Labs, Bengaluru'
+        title: 'E-Commerce Marketplace Lead (Min 2 Yrs Exp)',
+        location: 'Paidhu D2C & Multi-Brand, Hybrid'
       }
     ]
   ];

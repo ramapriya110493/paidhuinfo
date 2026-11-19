@@ -402,6 +402,20 @@
   border: 1px solid rgba(212, 175, 55, 0.25);
 }
 
+.paidhu-cr-badge-exp {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  border: 1px solid rgba(29, 78, 216, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
 .paidhu-cr-meta-item {
   font-size: 0.8rem;
   color: #64748b;

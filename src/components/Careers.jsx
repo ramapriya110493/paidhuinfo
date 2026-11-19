@@ -7,6 +7,7 @@ import {
   Briefcase, 
   MapPin, 
   Clock, 
+  Award,
   ShieldCheck, 
   HeartHandshake, 
   Users, 
@@ -47,58 +48,36 @@ export const Careers = ({ onNavigateHome, onNavigateNewsroom, onOpenContact }) =
   const jobListings = [
     {
       id: 1,
-      title: 'Senior Botanical Food Technologist',
-      department: 'Clean Food & R&D',
-      deptKey: 'rnd',
-      brand: 'Floffi Culinary Labs',
-      location: 'Pollachi / Bengaluru, India',
-      type: 'Full-time • Laboratory & R&D',
-      experience: '4–7 Years',
-      description: 'Lead botanical formulation, micro-encapsulation of active floral compounds, and shelf-life stability without synthetic preservatives across Floffi’s expanding gourmet spread and petal confiture lines.'
+      title: 'E-Commerce Executive',
+      department: 'E-Commerce & Digital',
+      deptKey: 'ecommerce',
+      brand: 'Paidhu Group & Floffi D2C',
+      location: 'Coimbatore / Chennai / Hybrid',
+      type: 'Full-time • E-Commerce & Marketplace Operations',
+      experience: 'Min 2 Years Experience',
+      description: 'Lead marketplace operations across Amazon, Flipkart, Blinkit/Quick Commerce, and brand D2C stores. Responsible for listing optimization, product cataloging, inventory forecasting, order fulfillment tracking, and campaign performance to scale digital revenue.'
     },
     {
       id: 2,
-      title: 'Organic Agricultural Sourcing Manager',
-      department: 'Agritech & Sourcing',
-      deptKey: 'agri',
-      brand: 'Just B Happy Network',
-      location: 'Pollachi & Western Ghats Corridor',
-      type: 'Full-time • Field & Cooperatives',
-      experience: '3–6 Years',
-      description: 'Expand Paidhu’s regenerative farmer cluster network. Provide agronomic advisory on zero-pesticide edible flower cultivation, manage buy-back guarantees, and champion fair living wages for grower families.'
+      title: 'Social Media Executive',
+      department: 'Brand Marketing & Social Media',
+      deptKey: 'marketing',
+      brand: 'Paidhu Creative & Brand Studio',
+      location: 'Chennai / Coimbatore / Remote Hybrid',
+      type: 'Full-time • Social Media & Content Strategy',
+      experience: 'Min 2 Years Experience',
+      description: 'Drive Paidhu’s digital brand voice, visual storytelling, and community engagement across Instagram, LinkedIn, YouTube, and digital platforms. Develop monthly content calendars, coordinate photography and video reels, engage followers, and track campaign analytics.'
     },
     {
       id: 3,
-      title: 'Saffron Extraction Quality Chemist',
-      department: 'Clean Food & R&D',
-      deptKey: 'rnd',
-      brand: 'Paidhu Saffron',
-      location: 'Pampore Valley, Kashmir',
-      type: 'Full-time • Quality Assurance',
-      experience: '2–5 Years',
-      description: 'Oversee cryogenic supercritical extraction protocols, ensuring ISO 3632 Category I purity, benchmark 285+ crocin ratings, and 100% farm-to-table batch certification for Kashmiri Mongra Saffron.'
-    },
-    {
-      id: 4,
-      title: 'Lead Full-Stack Cloud Architect',
-      department: 'Digital & Cloud (VIYARA)',
-      deptKey: 'tech',
-      brand: 'VIYARA Enterprise Tech',
-      location: 'Coimbatore / Remote Hybrid',
-      type: 'Full-time • Software Engineering',
-      experience: '5+ Years',
-      description: 'Architect scalable cloud infrastructure, supply chain traceability ledgers, and performant digital commerce engines powering the Paidhu ecosystem of ethical consumer brands.'
-    },
-    {
-      id: 5,
-      title: 'Regenerative Supply Chain Associate',
-      department: 'Corporate & Operations',
-      deptKey: 'ops',
+      title: 'Business Development Officer',
+      department: 'Sales & Business Development',
+      deptKey: 'sales',
       brand: 'Paidhu Group Corporate',
-      location: 'Chennai / Coimbatore',
-      type: 'Full-time • Operations',
-      experience: '2–4 Years',
-      description: 'Coordinate cold-chain distribution, tamper-evident biodegradable packaging sourcing, and nationwide logistics connecting artisanal farm clusters to premier retail and export channels.'
+      location: 'Chennai / Bengaluru / Coimbatore',
+      type: 'Full-time • B2B Sales & Corporate Alliances',
+      experience: 'Min 2 Years Experience',
+      description: 'Expand Paidhu’s commercial footprint across retail chains, modern trade, corporate gifting, and regional distributor networks. Identify strategic opportunities, pitch premium brand portfolios, negotiate commercial contracts, and hit revenue expansion milestones.'
     }
   ];
 
@@ -181,28 +160,22 @@ export const Careers = ({ onNavigateHome, onNavigateNewsroom, onOpenContact }) =
                 All Openings ({jobListings.length})
               </button>
               <button 
-                className={`paidhu-cr-filter-btn ${activeFilter === 'rnd' ? 'active' : ''}`}
-                onClick={() => setActiveFilter('rnd')}
+                className={`paidhu-cr-filter-btn ${activeFilter === 'ecommerce' ? 'active' : ''}`}
+                onClick={() => setActiveFilter('ecommerce')}
               >
-                Clean Food & R&D
+                E-Commerce & Digital
               </button>
               <button 
-                className={`paidhu-cr-filter-btn ${activeFilter === 'agri' ? 'active' : ''}`}
-                onClick={() => setActiveFilter('agri')}
+                className={`paidhu-cr-filter-btn ${activeFilter === 'marketing' ? 'active' : ''}`}
+                onClick={() => setActiveFilter('marketing')}
               >
-                Agritech & Sourcing
+                Social Media & Marketing
               </button>
               <button 
-                className={`paidhu-cr-filter-btn ${activeFilter === 'tech' ? 'active' : ''}`}
-                onClick={() => setActiveFilter('tech')}
+                className={`paidhu-cr-filter-btn ${activeFilter === 'sales' ? 'active' : ''}`}
+                onClick={() => setActiveFilter('sales')}
               >
-                Digital & Cloud (VIYARA)
-              </button>
-              <button 
-                className={`paidhu-cr-filter-btn ${activeFilter === 'ops' ? 'active' : ''}`}
-                onClick={() => setActiveFilter('ops')}
-              >
-                Corporate & Operations
+                Business Development
               </button>
             </div>
           </div>
@@ -214,6 +187,9 @@ export const Careers = ({ onNavigateHome, onNavigateNewsroom, onOpenContact }) =
                 <div className="paidhu-cr-job-main">
                   <div className="paidhu-cr-job-meta-row">
                     <span className="paidhu-cr-badge-dept">{job.department}</span>
+                    <span className="paidhu-cr-badge-exp">
+                      <Award size={13} /> {job.experience}
+                    </span>
                     <span className="paidhu-cr-meta-item">
                       <Briefcase size={14} /> {job.brand}
                     </span>
