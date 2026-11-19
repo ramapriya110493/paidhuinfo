@@ -252,10 +252,6 @@ export const Careers = ({ onNavigateHome, onNavigateNewsroom, onOpenContact }) =
               <h4 className="paidhu-nr-footer-heading">About Us</h4>
               <ul className="paidhu-nr-footer-list">
                 <li><a href="#home" onClick={onNavigateHome}>The Paidhu Vision</a></li>
-                <li><a href="#home" onClick={onNavigateHome}>Executive Leadership</a></li>
-                <li><a href="#home" onClick={onNavigateHome}>Governance & Quality Standards</a></li>
-                <li><a href="#newsroom" onClick={onNavigateNewsroom}>2028 Sustainability Charter</a></li>
-                <li><a href="#careers">Equal Opportunity Statement</a></li>
               </ul>
             </div>
 

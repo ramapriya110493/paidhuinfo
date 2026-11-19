@@ -1102,10 +1102,6 @@ function App() {
               <h4 className="paidhu-nr-footer-heading">About Us</h4>
               <ul className="paidhu-nr-footer-list">
                 <li><a href="#home" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>The Paidhu Vision</a></li>
-                <li><a href="#home" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Executive Leadership</a></li>
-                <li><a href="#home" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Governance & Quality Standards</a></li>
-                <li><a href="#newsroom" onClick={() => { setCurrentView('newsroom'); window.location.hash = 'newsroom'; }}>2028 Sustainability Charter</a></li>
-                <li><a href="#careers" onClick={() => { setCurrentView('careers'); window.location.hash = 'careers'; }}>Equal Opportunity Statement</a></li>
               </ul>
             </div>
 
