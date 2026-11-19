@@ -36,7 +36,7 @@ export const PaidhuHomeNews = ({ onNavigateNewsroom, onOpenContact }) => {
       kicker: 'SUSTAINABILITY CHARTER • 2028',
       title: 'Paidhu Expands "Just B Happy" Farmer Network Across Western Ghats',
       subtext: 'Partnering with regional agricultural stewards to cultivate safe, pesticide-free edible flowers with complete farm-to-table traceability.',
-      image: '/assets/hero_marigold_harvest.jpg',
+      image: '/assets/paidhu_pollachi_flower_farm.jpg',
       isExpress: false
     }
   ];

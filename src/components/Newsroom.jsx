@@ -477,28 +477,8 @@ export const Newsroom = ({ onNavigateHome, onOpenContact, onOpenSearch }) => {
         <div className="paidhu-nr-spotlight-grid">
           
           {/* Left: Big Visual Feature */}
-          <div 
-            className="paidhu-nr-big-feature"
-            onClick={() => setActiveStoryModal({
-              kicker: 'SUSTAINABILITY & WOMEN IN AGRI',
-              title: 'Project Malar: Empowering 5,000 Women Farmers in Flower Harvesting',
-              date: 'Spotlight Feature',
-              content: `POLLACHI & COIMBATORE CORRIDOR — Project Malar is Paidhu's flagship grassroots initiative focused on economic empowerment for rural women.\n\nBy training women agricultural workers in precision edible flower harvesting—ensuring zero pesticide contact, gentle dawn collection, and immediate cold-chain transport—Project Malar provides stable, above-market seasonal incomes while preserving regional biodiversity.`
-            })}
-          >
-            <div className="paidhu-nr-big-feature-scrim" />
-            <div className="paidhu-nr-feature-content">
-              <span className="paidhu-nr-feature-kicker">SUSTAINABILITY</span>
-              <h2 className="paidhu-nr-feature-headline">
-                Project Malar: Empowering 5,000 Women Farmers in Flower Harvesting
-              </h2>
-              <div className="paidhu-nr-feature-subrow">
-                <div className="paidhu-nr-feature-goldline" />
-                <p className="paidhu-nr-feature-subtext">
-                  Creating regenerative livelihoods and economic self-reliance through ethical floriculture and sustainable harvest cooperatives across southern India.
-                </p>
-              </div>
-            </div>
+          <div className="paidhu-nr-big-feature">
+            {/* Clean visual showcase without text overlay */}
           </div>
 
           {/* Right Column Stack: Facts Box + Clean Food Innovation */}
