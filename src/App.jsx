@@ -1149,7 +1149,7 @@ function App() {
                 className="paidhu-nr-footer-logo" 
               />
               <span className="paidhu-nr-footer-copyright">
-                © 2026 Paidhu – Ethical Foods Pvt. Ltd. All rights reserved.
+                © 2026 All rights reserved to Paidhu.
               </span>
             </div>
 
