@@ -231,12 +231,10 @@ export const Careers = ({ onNavigateHome, onNavigateNewsroom, onOpenContact }) =
             <div className="paidhu-nr-footer-col">
               <h4 className="paidhu-nr-footer-heading">Businesses</h4>
               <ul className="paidhu-nr-footer-list">
-                <li><a href="https://paidhuethicalfoods.com" target="_blank" rel="noopener noreferrer">Paidhu Ethical Foods</a></li>
                 <li><a href="https://floffi.in" target="_blank" rel="noopener noreferrer">Floffi</a></li>
-                <li><a href="https://paidhuethicalfoods.com" target="_blank" rel="noopener noreferrer">Brew Flora</a></li>
+                <li><a href="https://viyara.co.in" target="_blank" rel="noopener noreferrer">Viyara</a></li>
                 <li><a href="https://paidhuethicalfoods.com" target="_blank" rel="noopener noreferrer">Bloom Cookies</a></li>
-                <li><a href="https://paidhusaffron.com" target="_blank" rel="noopener noreferrer">Paidhu Saffron</a></li>
-                <li><a href="https://viyara.co.in" target="_blank" rel="noopener noreferrer">Viyara Enterprise Tech</a></li>
+                <li><a href="https://paidhuethicalfoods.com" target="_blank" rel="noopener noreferrer">The Edible Flower Co.</a></li>
               </ul>
             </div>
 

@@ -5,12 +5,6 @@ export const TataBusinessDropdown = ({ mode = 'business', onClose, onNavigateSec
   // 1. Business mode data (with categories as requested)
   const businesses = [
     {
-      name: 'Paidhu Ethical Foods',
-      category: 'Ethical Foods & Natural Agriculture',
-      domain: 'paidhuethicalfoods.com',
-      url: 'https://paidhuethicalfoods.com'
-    },
-    {
       name: 'Floffi',
       category: 'Floral Gastronomy & Gourmet Spreads',
       domain: 'floffi.in',
@@ -21,15 +15,32 @@ export const TataBusinessDropdown = ({ mode = 'business', onClose, onNavigateSec
       category: 'Enterprise Technology & Software',
       domain: 'viyara.co.in',
       url: 'https://viyara.co.in'
+    },
+    {
+      name: 'Bloom Cookies',
+      category: 'Artisanal Edible Flower Confections',
+      domain: 'paidhuethicalfoods.com',
+      url: 'https://paidhuethicalfoods.com'
+    },
+    {
+      name: 'The Edible Flower Co.',
+      category: '100% Natural Edible Flower Foods',
+      domain: 'paidhuethicalfoods.com',
+      url: 'https://paidhuethicalfoods.com'
     }
   ];
 
   // 2. Brands mode data (for "Our Brands" dropdown)
   const brands = [
     {
-      name: 'Paidhu Saffron',
-      category: 'Grade-A Kashmiri Mongra Saffron',
-      url: 'https://paidhusaffron.com'
+      name: 'Floffi',
+      category: 'Handcrafted Floral Jams & Spreads',
+      url: 'https://floffi.in'
+    },
+    {
+      name: 'Viyara',
+      category: 'Enterprise Cloud & SaaS Engines',
+      url: 'https://viyara.co.in'
     },
     {
       name: 'Bloom Cookies',
@@ -37,24 +48,9 @@ export const TataBusinessDropdown = ({ mode = 'business', onClose, onNavigateSec
       url: 'https://paidhuethicalfoods.com'
     },
     {
-      name: 'Floffi',
-      category: 'Handcrafted Floral Jams & Spreads',
-      url: 'https://floffi.in'
-    },
-    {
-      name: 'Brew Flora',
-      category: 'Whole-Blossom Herbal Infusions',
+      name: 'The Edible Flower Co.',
+      category: '100% Natural Edible Flower Foods',
       url: 'https://paidhuethicalfoods.com'
-    },
-    {
-      name: 'Medley Teas',
-      category: 'Single-Estate Orthodox Teas',
-      url: 'https://paidhuethicalfoods.com'
-    },
-    {
-      name: 'Viyara Tech',
-      category: 'Enterprise Cloud & SaaS Engines',
-      url: 'https://viyara.co.in'
     }
   ];
 
