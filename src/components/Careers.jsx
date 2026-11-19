@@ -244,11 +244,8 @@ export const Careers = ({ onNavigateHome, onNavigateNewsroom, onOpenContact }) =
             <div className="paidhu-nr-footer-col">
               <h4 className="paidhu-nr-footer-heading">Community</h4>
               <ul className="paidhu-nr-footer-list">
-                <li><a href="#newsroom" onClick={onNavigateNewsroom}>Just B Happy Farmer Network</a></li>
-                <li><a href="#careers">Project Malar (Women in Agri)</a></li>
-                <li><a href="#newsroom" onClick={onNavigateNewsroom}>Pesticide-Free Flower Cultivation</a></li>
-                <li><a href="#newsroom" onClick={onNavigateNewsroom}>Clean Food Education & Recipes</a></li>
-                <li><a href="#newsroom" onClick={onNavigateNewsroom}>Regenerative Soil Stewardship</a></li>
+                <li><a href="#newsroom" onClick={onNavigateNewsroom}>Just B Happy Farm</a></li>
+                <li><a href="#newsroom" onClick={onNavigateNewsroom}>Family Tales</a></li>
               </ul>
             </div>
 

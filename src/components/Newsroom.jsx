@@ -602,11 +602,8 @@ export const Newsroom = ({ onNavigateHome, onOpenContact, onOpenSearch }) => {
             <div className="paidhu-nr-footer-col">
               <h4 className="paidhu-nr-footer-heading">Community</h4>
               <ul className="paidhu-nr-footer-list">
-                <li><a href="#newsroom" onClick={() => setShowExpressModal(true)}>Just B Happy Farmer Network</a></li>
-                <li><a href="#newsroom">Project Malar (Women in Agri)</a></li>
-                <li><a href="#newsroom">Pesticide-Free Flower Cultivation</a></li>
-                <li><a href="#newsroom">Clean Food Education & Recipes</a></li>
-                <li><a href="#newsroom">Regenerative Soil Stewardship</a></li>
+                <li><a href="#newsroom" onClick={() => setShowExpressModal(true)}>Just B Happy Farm</a></li>
+                <li><a href="#newsroom">Family Tales</a></li>
               </ul>
             </div>
 

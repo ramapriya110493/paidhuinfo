@@ -1103,11 +1103,8 @@ function App() {
             <div className="paidhu-nr-footer-col">
               <h4 className="paidhu-nr-footer-heading">Community</h4>
               <ul className="paidhu-nr-footer-list">
-                <li><a href="#newsroom" onClick={() => { setCurrentView('newsroom'); window.location.hash = 'newsroom'; }}>Just B Happy Farmer Network</a></li>
-                <li><a href="#careers" onClick={() => { setCurrentView('careers'); window.location.hash = 'careers'; }}>Project Malar (Women in Agri)</a></li>
-                <li><a href="#newsroom" onClick={() => { setCurrentView('newsroom'); window.location.hash = 'newsroom'; }}>Pesticide-Free Flower Cultivation</a></li>
-                <li><a href="#newsroom" onClick={() => { setCurrentView('newsroom'); window.location.hash = 'newsroom'; }}>Clean Food Education & Recipes</a></li>
-                <li><a href="#newsroom" onClick={() => { setCurrentView('newsroom'); window.location.hash = 'newsroom'; }}>Regenerative Soil Stewardship</a></li>
+                <li><a href="#newsroom" onClick={() => { setCurrentView('newsroom'); window.location.hash = 'newsroom'; }}>Just B Happy Farm</a></li>
+                <li><a href="#newsroom" onClick={() => { setCurrentView('newsroom'); window.location.hash = 'newsroom'; }}>Family Tales</a></li>
               </ul>
             </div>
 
