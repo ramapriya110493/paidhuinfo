@@ -1109,7 +1109,7 @@ function App() {
             <div className="paidhu-nr-footer-col">
               <h4 className="paidhu-nr-footer-heading">Stay Connected</h4>
               <p className="paidhu-nr-footer-subtext">
-                Subscribe to receive verified Paidhu press releases, botanical breakthroughs, and corporate dispatches.
+                Subscribe to receive verified Paidhu press releases, brand updates, and corporate dispatches.
               </p>
 
               <form onSubmit={(e) => { e.preventDefault(); alert('Thank you for subscribing to Paidhu Newsroom dispatches.'); }} className="paidhu-nr-newsletter-form">

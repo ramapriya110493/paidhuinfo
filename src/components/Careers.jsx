@@ -259,7 +259,7 @@ export const Careers = ({ onNavigateHome, onNavigateNewsroom, onOpenContact }) =
             <div className="paidhu-nr-footer-col">
               <h4 className="paidhu-nr-footer-heading">Stay Connected</h4>
               <p className="paidhu-nr-footer-subtext">
-                Subscribe to receive verified Paidhu press releases, botanical breakthroughs, and talent updates.
+                Subscribe to receive verified Paidhu press releases, brand updates, and talent announcements.
               </p>
 
               <form onSubmit={handleSubscribe} className="paidhu-nr-newsletter-form">
