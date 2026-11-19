@@ -208,42 +208,42 @@ function App() {
   const heroSlides = [
     {
       id: 'purity',
-      badge: 'THE EDIBLE FLOWER CO.',
-      title: "Nature's Floral Goodness.Pure Harvest",
-      subtitle: 'Crafted with 100% natural edible flowers, pure botanicals, and tradition.',
-      buttonText: 'Explore Floral Foods',
-      secondaryText: 'Our Heritage',
+      badge: '',
+      title: '',
+      subtitle: '',
+      buttonText: '',
+      secondaryText: '',
       bgImage: '/assets/hero_marigold_harvest.jpg',
       mobileBgImage: '/assets/hero_marigold_harvest_mobile.jpg',
       sectionId: 'brands',
       secondarySectionId: 'philosophy',
-      metrics: ['100% Edible Flowers', 'Zero Preservatives', 'Ethical Harvest']
+      metrics: []
     },
     {
       id: 'saffron',
-      badge: 'GRADE-A KASHMIRI MONGRA',
-      title: 'The Crimson Gold of Kashmir.Authentic Purity',
-      subtitle: 'Ethically handpicked Grade-A Mongra Kashmiri Saffron from Pampore valley.',
-      buttonText: 'Discover Saffron',
-      secondaryText: 'Purity Standards',
+      badge: '',
+      title: '',
+      subtitle: '',
+      buttonText: '',
+      secondaryText: '',
       bgImage: '/assets/hero_saffron.jpg',
       mobileBgImage: '/assets/hero_saffron_mobile.jpg',
       sectionId: 'brands',
       secondarySectionId: 'brands',
-      metrics: ['285+ Active Crocin', '100% Single Origin', 'Certified Pure']
+      metrics: []
     },
     {
       id: 'tech',
-      badge: 'SOFTWARE & GROWTH ENGINES',
-      title: 'Empowering Ethical Enterprise.Digital Scale',
-      subtitle: 'Next-generation cloud software, data-driven marketing, and scalable digital solutions.',
-      buttonText: 'Explore Viyara',
-      secondaryText: 'Innovation Hub',
+      badge: '',
+      title: '',
+      subtitle: '',
+      buttonText: '',
+      secondaryText: '',
       bgImage: '/assets/hero_viyara_team.jpg',
       mobileBgImage: '/assets/hero_viyara_team_mobile.jpg',
       sectionId: 'brands',
       secondarySectionId: 'brands',
-      metrics: ['Enterprise Cloud', 'Predictive AI', 'High Scale']
+      metrics: []
     }
   ];
 
