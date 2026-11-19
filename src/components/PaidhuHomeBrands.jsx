@@ -26,9 +26,9 @@ export const PaidhuHomeBrands = ({ onOpenBrandModal }) => {
       kicker: 'OUR BRANDS',
       tagline: 'Pure Grade-A Mongra Kashmiri Saffron from the Terraces of Pampore',
       description: 'Laboratory-certified 285+ crocin active botanical density. 100% natural, ethically harvested, with complete single-origin valley traceability.',
-      image: '/assets/hero_saffron.jpg',
-      mobileImage: '/assets/hero_saffron_mobile.jpg',
-      thumb: '/assets/hero_saffron.jpg',
+      image: '/assets/paidhu_saffron_jar_harvest.jpg',
+      mobileImage: '/assets/paidhu_saffron_jar_harvest.jpg',
+      thumb: '/assets/paidhu_saffron_jar_harvest.jpg',
       url: 'https://paidhusaffron.com'
     },
     {
