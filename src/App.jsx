@@ -64,7 +64,7 @@ function App() {
       title: 'Advanced Saffron Crocin Extraction & Botanical Science',
       subtitle: 'Pure Kashmiri Grade-A Molecular Isolation',
       desc: 'At the Paidhu Botanical Research Institute in Srinagar, our scientists have engineered clean cold-press bio-extraction methods that preserve delicate carotenoids, safranal, and crocin without chemical solvents. The result is 100% active botanical potency certified for international high-end wellness and ethical luxury applications.',
-      image: '/assets/paidhu_saffron_jar_harvest.jpg',
+      image: '/assets/paidhu_saffron_harvest_field.jpg',
       metrics: [
         { label: 'Crocin Purity Rating', value: 'Grade-A 280+' },
         { label: 'Synthetic Additives', value: '0.0%' },
@@ -138,7 +138,7 @@ function App() {
       link: 'https://paidhuethicalfoods.com'
     },
     {
-      image: '/assets/paidhu_saffron_jar_harvest.jpg',
+      image: '/assets/paidhu_saffron_harvest_field.jpg',
       tag: 'GLOBAL CERTIFICATION',
       title: 'Paidhu Saffron Achieves 100% Grade-A Mongra International Purity Benchmark',
       summary: 'Independent botanical laboratory testing confirms record crocin levels, deep crimson color, and authentic aroma direct from the Kashmir valley.',

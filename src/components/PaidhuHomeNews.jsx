@@ -28,7 +28,7 @@ export const PaidhuHomeNews = ({ onNavigateNewsroom, onOpenContact }) => {
       kicker: 'GLOBAL INNOVATION • BIO-EXTRACTION',
       title: 'Kashmiri Saffron Bio-Extraction Achieves Benchmark 285+ Crocin Rating',
       subtext: 'Supercritical cold-temperature molecular isolation delivers 100% active botanical potency certified for international fine dining.',
-      image: '/assets/paidhu_saffron_jar_harvest.jpg',
+      image: '/assets/paidhu_saffron_harvest_field.jpg',
       isExpress: false
     },
     {

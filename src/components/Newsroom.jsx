@@ -328,7 +328,7 @@ export const Newsroom = ({ onNavigateHome, onOpenContact, onOpenSearch }) => {
           {/* ----------------- ROW 2: CARD 5 (Image Card) ----------------- */}
           <div 
             className="paidhu-nr-card-image"
-            style={{ backgroundImage: `url('/assets/paidhu_saffron_jar_harvest.jpg')` }}
+            style={{ backgroundImage: `url('/assets/paidhu_saffron_harvest_field.jpg')` }}
             onClick={() => setActiveStoryModal({
               kicker: 'BOTANICAL SCIENCE',
               title: 'Pure Kashmiri Mongra Saffron: Direct Valley Harvest & Cryogenic Seals',
