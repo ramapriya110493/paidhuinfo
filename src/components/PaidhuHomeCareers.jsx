@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './PaidhuHomeCareers.css';
-import { ArrowRight, Users, ShieldAlert, X } from 'lucide-react';
+import { ArrowRight, Users, ShieldAlert, X, ShieldCheck } from 'lucide-react';
 
 export const PaidhuHomeCareers = ({ onNavigateCareers }) => {
   // 1. Featured Jobs Cycler State (Card 4)
@@ -151,15 +151,15 @@ export const PaidhuHomeCareers = ({ onNavigateCareers }) => {
             onClick={onNavigateCareers}
             role="button"
             tabIndex={0}
-            aria-label="View Paidhu Careers in Numbers"
+            aria-label="View Paidhu Purity & Standards"
           >
             <div className="paidhu-hc-numbers-kicker">IN NUMBERS</div>
 
             <div className="paidhu-hc-numbers-body">
-              <Users className="paidhu-hc-numbers-icon" strokeWidth={1.5} />
-              <div className="paidhu-hc-numbers-stat">5,000+</div>
+              <ShieldCheck className="paidhu-hc-numbers-icon" strokeWidth={1.5} />
+              <div className="paidhu-hc-numbers-stat">100%</div>
               <div className="paidhu-hc-numbers-label">
-                Farmers & harvesters empowered across the Paidhu network
+                Certified Single-Origin & Pesticide-Free Harvest
               </div>
             </div>
 
