@@ -57,17 +57,18 @@ export const PaidhuHomeCareers = ({ onNavigateCareers }) => {
         <div className="paidhu-hc-grid">
 
           {/* CARD 1: LEFT TALL CARD (Beware of Job Scams - Spans Rows 1 & 2) */}
+          {/* CARD 1: TALL LEFT CARD (Culture & Hiring Opportunities) */}
           <div 
             className="paidhu-hc-card-tall"
-            onClick={() => setShowDisclaimer(true)}
+            onClick={onNavigateCareers}
             role="button"
             tabIndex={0}
-            aria-label="Read Beware of Job Scams disclaimer"
+            aria-label="Explore careers at Paidhu"
           >
             <div className="paidhu-hc-scam-imgwrap">
               <img 
                 src="/assets/careers_scam_advisory.jpg" 
-                alt="Paidhu Careers Official Recruitment Authentication & Security Advisory" 
+                alt="Paidhu Careers Culture & Opportunities" 
                 className="paidhu-hc-scam-img"
               />
               <div className="paidhu-hc-scam-notch" />
@@ -76,30 +77,20 @@ export const PaidhuHomeCareers = ({ onNavigateCareers }) => {
             <div className="paidhu-hc-scam-body">
               <div>
                 <div className="paidhu-hc-scam-kicker">CAREERS</div>
-                <h4 className="paidhu-hc-scam-title">Beware of Job Scams</h4>
+                <h4 className="paidhu-hc-scam-title">Join Our Growing Team</h4>
                 <p className="paidhu-hc-scam-quote">
-                  We do not charge/accept any amount or security deposit from job seekers.{' '}
-                  <button 
-                    type="button" 
-                    className="paidhu-hc-disclaimer-btn"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setShowDisclaimer(true);
-                    }}
-                  >
-                    Read disclaimer.
-                  </button>
+                  Build the future of ethical consumer brands, digital commerce, and sustainable food innovation with Paidhu.{' '}
+                  <span className="paidhu-hc-disclaimer-btn">
+                    View openings.
+                  </span>
                 </p>
               </div>
 
               <div className="paidhu-hc-scam-footer">
                 <button 
                   className="paidhu-hc-arrow-btn" 
-                  aria-label="View Job Scam Advisory"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setShowDisclaimer(true);
-                  }}
+                  aria-label="Explore Careers at Paidhu"
+                  onClick={onNavigateCareers}
                 >
                   <ArrowRight size={18} />
                 </button>
